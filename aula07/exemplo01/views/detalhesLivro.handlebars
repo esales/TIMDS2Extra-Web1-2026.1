@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Lista de livros</title>
+
+    <style>
+        div{
+            border: 1px solid black;
+            margin: 5px;
+            width: 35vw;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 16px;
+        }
+        
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1{
+            font-family: monospace;
+            margin-bottom: 20px;
+        }
+
+        a{
+            text-decoration: none; 
+            color: gray;
+            margin-top: 20px;
+            font-family: monospace;
+            font-size: 14px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>{{livro.titulo}}</h1>
+
+    <div>
+        <p>Autor: {{livro.autor}}</p>
+        <p>Ano: {{livro.ano}}</p>
+    </div>
+
+    <a href="/livros">Voltar para a lista</a>
+</body>
+</html>
