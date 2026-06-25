@@ -1,0 +1,21 @@
+<head>
+    <title>Listar estudantes</title>
+</head>
+<body>
+    <h1>Listar estudantes</h1>
+    <a href="/estudantes/create">Cadastrar</a>
+    <ul>
+        {{#each estudantes}}
+        <li>
+            {{nome}} - {{idade}}
+            <div>
+                <a href="/estudantes/{{id}}/edit">editar</a>
+                <form action="/estudantes/{{id}}?_method=DELETE" method="POST">
+                    <button type="submit">excluir</button>
+                </form>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</body>
+</html>
